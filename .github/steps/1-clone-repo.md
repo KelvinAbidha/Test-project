@@ -12,6 +12,6 @@ In this step, you will learn how to clone a GitHub repository to your local mach
    - Access your command line interface (CLI) or terminal on your computer.
 
 2. **Run the Clone Command:**
-   - Use the git clone command followed by the repository URL:
+   - Use the `git clone` command followed by the repository URL:
    ```bash
-   git clone https://github.com/octocat/Spoon-Knife
+   git clone https://github.com/KelvinAbidha/Test-project

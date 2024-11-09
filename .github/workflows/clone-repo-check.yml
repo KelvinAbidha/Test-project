@@ -4,6 +4,8 @@
 #Develop a simple GitHub Actions workflow to check if this step's goal is met.
 
 
+# File: .github/workflows/clone-repo-check.yml
+
 name: Clone Repo Check
 
 on:
@@ -18,12 +20,15 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    
+      
+    - name: Clone Test-project Repository
+      run: |
+        git clone https://github.com/KelvinAbidha/Test-project.git
+     
     - name: Verify Clone
       run: |
-        if [ -d "Spoon-Knife" ]; then
+        if [ -d "Test-project" ]; then
           echo "Repository cloned successfully!"
         else
           echo "Clone verification failed."
           exit 1
-        fi
