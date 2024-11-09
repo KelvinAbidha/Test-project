@@ -6,8 +6,6 @@
 
 # File: .github/workflows/clone-repo-check.yml
 
-# File: .github/workflows/clone-repo-check.yml
-
 name: Clone Repo Check
 
 on:
@@ -34,3 +32,4 @@ jobs:
         else
           echo "Clone verification failed."
           exit 1
+        fi
