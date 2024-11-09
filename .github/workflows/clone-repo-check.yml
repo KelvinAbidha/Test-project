@@ -1,0 +1,29 @@
+
+### Step 2: YAML Workflow
+
+#Develop a simple GitHub Actions workflow to check if this step's goal is met.
+
+
+name: Clone Repo Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-clone:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Verify Clone
+      run: |
+        if [ -d "Spoon-Knife" ]; then
+          echo "Repository cloned successfully!"
+        else
+          echo "Clone verification failed."
+          exit 1
+        fi
