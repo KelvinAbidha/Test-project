@@ -14,4 +14,4 @@ In this step, you will learn how to clone a GitHub repository to your local mach
 2. **Run the Clone Command:**
    - Use the `git clone` command followed by the repository URL:
    ```bash
-   git clone https://github.com/KelvinAbidha/Test-project
+   git clone https://github.com/KelvinAbidha/Test-project.git
