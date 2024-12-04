@@ -26,3 +26,4 @@ jobs:
         else
           echo "Clone verification failed."
           exit 1
+
