@@ -17,13 +17,18 @@ jobs:
       
     - name: Clone Test-project Repository
       run: |
-        git clone https://github.com/KelvinAbidha/Test-project.git
-     
+        echo "Starting clone operation..."
+        git clone https://github.com/KelvinAbidha/Test-project.git || {
+          echo "Failed to clone repository. Check the URL or permissions.";
+          exit 1;
+        }
+        ls -l  # List all files in the current directory for debugging
+        
     - name: Verify Clone
       run: |
         if [ -d "Test-project" ]; then
           echo "Repository cloned successfully!"
         else
-          echo "Clone verification failed."
+          echo "Clone verification failed. The 'Test-project' directory does not exist."
           exit 1
-
+        fi
