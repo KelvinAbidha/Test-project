@@ -1,9 +1,3 @@
-
-### Step 2: YAML Workflow
-
-#Develop a simple GitHub Actions workflow to check if this step's goal is met.
-
-
 # File: .github/workflows/clone-repo-check.yml
 
 name: Clone Repo Check
@@ -19,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       
     - name: Clone Test-project Repository
       run: |
@@ -32,4 +26,3 @@ jobs:
         else
           echo "Clone verification failed."
           exit 1
-        fi
